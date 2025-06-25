@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>P A Y  registrator </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/pago.css">
+</head>
+
+
+
+<body>
+  <div class="consola">cargando interfaz</div>
+  <!-- Contenedor principal -->
+  <div class="grid-container">
+    <!-- Encabezado -->
+    <header class="grid-item header">
+      <div class="logo">Portal Pago</div>
+      <nav class="menu">
+        <a href="index.html">INICIO</a>
+        <a href="tienda.html">TIENDA</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+    </header>
+
+    <!-- Columna izquierda con mensaje de bienvenida -->
+    <section class="grid-item left">
+      <h2>BIENVENIDO</h2>
+      <p>Proceso de pago por consola de repuestos y servicios.</p>
+      <p>Complete el formulario para pago.</p>
+      
+      <!-- Terminal simulada con texto animado --esto funciona>
+      <!- <div id="terminal-simulada"></div> -->
+      <!--<div id="terminal-simulada">
+        <img src="imagenes/atari.png" alt="Atari Logo" class="logo-terminal" />
+      </div> -->
+
+      <div id="terminal-simulada">
+        <div id="texto-terminal"></div>
+        <img src="imagenes/atari.png" alt="Atari Logo" class="logo-terminal" />
+      </div>
+
+    
+    </section>
+
+    <!-- Columna derecha con formulario -->
+    <section class="grid-item right">
+      <!-- mensaje de errror -->
+       <div id="mensajeError" class="mensaje-error"></div>
+      <form id="formularioPago">
+        <!-- datos personales -->
+         <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+         <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+         <input type="text" id="rut" name="rut" placeholder="RUT (ej: 12.345.678-9)" required>
+         <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+         <input type="text" id="direccion" name="direccion" placeholder="Dirección de facturacion" required>
+         <input type="tel" id="telefono" name="telefono" placeholder="Teléfono de contacto" required>
+         
+         <!--pago de Tarjeta -->
+         <select id="tipoPago" name="tipoPago" required>
+            <option value="">Selecciona método de pago</option>
+            <option value="visa">Visa</option>
+            <option value="master">Master Plop</option>
+            <option value="debito">Débito</option>
+        </select>
+        
+        <input
+  type="text"
+  id="numerotarjeta"
+  name="numerotarjeta"
+  placeholder="Número de tarjeta (16 dígitos)"
+  maxlength="16"
+  inputmode="numeric"
+  required>
+<!-- pattern="\d{16}" -->
+
+  <button type="submit">P A Y</button>
+</form>
+
+    </section>
+
+    
+
+  </div>
+
+  <!-- Script principal -->
+  <script src="js/pago.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <nav class="footer-nav">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="pedidos.html">Especiales</a>
+    </nav>
+    <p>&copy; 2025 - Mi Web Page. Todos los derechos reservados.</p>
+    <p>&copy; Sitio Realizado por IA - Inteligencia Artesanal.</p>
+  </footer>
+</body>
+</html>
