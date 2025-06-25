@@ -69,7 +69,7 @@ if (iconoCarrito) {
       window.location.href = "carrito.html";
     } else {
       localStorage.setItem("redirigirDespues", "carrito.html");
-      window.location.href = "registro.html";
+      window.location.href = "carrito.html";
     }
   });
 }
